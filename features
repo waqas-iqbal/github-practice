@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My First Website</title>
+</head>
+<body>
+
+    <header>
+        <h1>Welcome to My Website!</h1>
+    </header>
+
+    <main>
+        <p>This is the main content of the web page. You can add text, images, and more here.</p>
+        <p>This is a second paragraph to demonstrate multiple paragraphs.</p>
+        <p>This is a Third paragraph to demonstrate multiple paragraphs.</p>
+        <p>This is a Fourth paragraph to demonstrate multiple paragraphs.</p>
+        <p>This is a Fifth paragraph to demonstrate multiple paragraphs.</p>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 My Website</p>
+    </footer>
+
+</body>
+</html>
