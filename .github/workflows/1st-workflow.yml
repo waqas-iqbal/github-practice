@@ -7,13 +7,19 @@
 #       - name: GitHub_Context 
 #         run: echo '${{ toJSON(github)}}'
 
-name: 1st-workflow
+name: "1st-workflow"
+
 on: pull_request
+
 jobs:
   pull_request_lab:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
       - name: Say Hello
         run: echo "Hello World"
+
       - name: Say Hello Again
         run: echo "Hello World Again"
