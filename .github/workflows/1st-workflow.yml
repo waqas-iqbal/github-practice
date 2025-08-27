@@ -1,5 +1,5 @@
 # name: 1st-workflow
-# on: pull_request
+# on: push
 # jobs:
 #   dump_context_to_log:
 #     runs-on: ubuntu-latest
