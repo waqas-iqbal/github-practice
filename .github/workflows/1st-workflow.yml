@@ -10,7 +10,7 @@
 name: 1st-workflow
 on: pull_request
 jobs:
-  pull_request_lab
+  pull_request_lab:
     runs-on: ubuntu-latest
     steps:
       - name: GitHub_Context 
