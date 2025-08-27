@@ -13,5 +13,7 @@ jobs:
   pull_request_lab:
     runs-on: ubuntu-latest
     steps:
-      - name: GitHub_Context 
+      - name: Say Hello
         run: echo "Hello World"
+      - name: Say Hello Again
+        run: echo "Hello World Again"
