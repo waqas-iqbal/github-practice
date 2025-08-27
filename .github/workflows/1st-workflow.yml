@@ -1,8 +1,17 @@
+# name: 1st-workflow
+# on: pull_request
+# jobs:
+#   dump_context_to_log:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - name: GitHub_Context 
+#         run: echo '${{ toJSON(github)}}'
+
 name: 1st-workflow
-on: push
+on: pull_request
 jobs:
-  dump_context_to_log:
+  pull_request_lab
     runs-on: ubuntu-latest
     steps:
       - name: GitHub_Context 
-        run: echo '${{ toJSON(github)}}'
+        run: echo "Hello World"
