@@ -1,22 +1,8 @@
 name: 1st-workflow
-on: [push, workflow_dispatch]
-
+on: push
 jobs:
-  build:
+  dump_context_to_log:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@4
-      - name: Say Hello! 
-        run: echo "Hello-World"
-      - name: Install Nodejs
-        uses: action/setup-node@v4
-        with: 
-          node-version: 18
-      - name: Install dependencies
-        run: npm  install       
-  test:  
-    needs: build
-    runs-on: ubuntu-latest
-    steps:
-      - name: Run Tests
-        run: npm test
+      - name: GitHub_Context 
+        run: '${{ toJSON(github)}}'
