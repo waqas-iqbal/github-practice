@@ -1,14 +1,22 @@
 name: 1st-workflow
-on: workflow_dispatch
-# on: push
+on: [push, workflow_dispatch]
+
 jobs:
-  first-job:
+  build:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@4
       - name: Say Hello! 
         run: echo "Hello-World"
-  second-job:  
+      - name: Install Nodejs
+        uses: action/setup-node@v4
+        with: 
+          node-version: 18
+      - name: Install dependencies
+        run: npm  install       
+  test:  
+    needs: build
     runs-on: ubuntu-latest
     steps:
-      - name: Say Bye! 
-        run: echo "Bye-World"
+      - name: Run Tests
+        run: npm test
