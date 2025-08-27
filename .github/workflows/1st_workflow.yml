@@ -40,7 +40,7 @@ on: push
 jobs:
   Build:
     runs-on: Ubuntu-latest
-    Steps:
+    steps:
       - name: Say Hello
         run: echo "Hello Build , $GITHUB_ACTOR"
       - name: Say Welcome
