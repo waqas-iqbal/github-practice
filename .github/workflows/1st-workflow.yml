@@ -23,14 +23,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Dump_GitHub_Context 
-        run: echo '${{ toJSON(github)}}'
-  job2:
-    runs-on: ubuntu-latest
-    outputs:
-      output1: ${{ steps.step1.ouputs.step1value }}
-    steps:
-      - name: step1
-        id: step1
-        run: echo "step1value=Hello" >> $GITHUB_OUTPUT
+        run: echo '${{ toJSON(runner)}}'
+  # job2:
+  #   runs-on: ubuntu-latest
+  #   outputs:
+  #     output1: ${{ steps.step1.ouputs.step1value }}
+  #   steps:
+  #     - name: step1
+  #       id: step1
+  #       run: echo "step1value=Hello" >> $GITHUB_OUTPUT
       
 
