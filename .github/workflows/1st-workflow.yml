@@ -26,6 +26,11 @@ jobs:
         run: echo '${{ toJSON(runner)}}'
       - name: Show Runner context
         run: echo "Running on ${{ runner.os }} (${{ runner.arch }})"
+      - name : run multiple commands       # 👈 Action
+        run: |                 # 👈 Step & pipe | will help to run multiple commands
+          pwd
+          ls -a
+          echo $GITHUB_SHA
   # job2:
   #   runs-on: ubuntu-latest
   #   outputs:
