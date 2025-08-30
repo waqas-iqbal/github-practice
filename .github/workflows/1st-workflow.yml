@@ -1,12 +1,3 @@
-name: context
-on: workflow_dispatch
-jobs:
-  dump_context_to_log:
-    runs-on: ubuntu-latest
-    steps:
-      - name: GitHub_Context 
-        run: echo '${{ toJSON(github)}}'
-
 # name: "1st-workflow"
 
 # on: pull_request
@@ -23,3 +14,23 @@ jobs:
 
 #       - name: Say Hello Again
 #         run: echo "Hello World Again"
+#########################################
+
+name: context
+on: workflow_dispatch
+jobs:
+  job1:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Dump_GitHub_Context 
+        run: echo '${{ toJSON(github)}}'
+  job2:
+    runs-on: ubuntu-latest
+    outputs:
+      output1: ${{ steps.step1.ouputs.step1value }}
+    steps:
+      - name: step1
+        id: step1
+        run: echo "step1value=Hello" >> $GITHUB_OUTPUT
+      
+
