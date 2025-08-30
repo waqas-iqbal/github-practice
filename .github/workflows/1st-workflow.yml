@@ -24,6 +24,8 @@ jobs:
     steps:
       - name: Dump_GitHub_Context 
         run: echo '${{ toJSON(runner)}}'
+      - name: Show Runner context
+        run: echo "Running on ${{ runner.os }} (${{ runner.arch }})"
   # job2:
   #   runs-on: ubuntu-latest
   #   outputs:
